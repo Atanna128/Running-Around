@@ -7,7 +7,7 @@ public class ControllerScript : MonoBehaviour
     public GameObject block;
     public GameObject playGround;
     private float lasttime;
-    public GameObject centerBall;
+    public GameObject pic2;
 
     public List<GameObject> blockList = new List<GameObject>();
     float maxGravDist = 4.0f;
@@ -27,15 +27,16 @@ public class ControllerScript : MonoBehaviour
             var theBarRectTransform = newobj.transform as RectTransform;
             theBarRectTransform.sizeDelta = new Vector2(20, 20);
             newobj.transform.SetParent(playGround.transform);
-            
+            pic2.transform.Rotate(new Vector3(0, 0, 2f));
         }
+        
     }
 
     // Update is called once per frame
    
     void Update()
     {
-         
+        
         float time = Time.time;
         //if((time-lasttime) >0.5)
         //{
@@ -47,22 +48,22 @@ public class ControllerScript : MonoBehaviour
         //    theBarRectTransform.sizeDelta = new Vector2(20, 20);
         //    newobj.transform.SetParent(playGround.transform);
         //    lasttime = time;
-        //}
-        playGround.transform.Rotate(new Vector3(00, 0,0.2f));
-        centerBall.transform.Rotate(new Vector3(00, 0, -0.3f));
+        ////}
+        //playGround.transform.Rotate(new Vector3(00, 0,0.2f));
+        //pic2.transform.Rotate(new Vector3(00, 0, -0.3f));
         
-        foreach (GameObject planet in blockList)
-        {
-            Vector2 direction = (centerBall.transform.position - planet.transform.position).normalized;
-            planet.transform.Translate(direction * Time.deltaTime * mspeed);
-            //    float dist = Vector3.Distance(planet.transform.position,centerBall.transform.position);
-            //    if (dist <= maxGravDist)
-            //    {
-            //        Vector3 v = planet.transform.position - transform.position;
-            //        //GetComponent<Rigidbody2D>().AddForce(v.normalized * (1.0f - dist / maxGravDist) * maxGravity);
-            //        GetComponent<Rigidbody2D>().AddForce(transform.up * 10.0f);
-            //    }
-        }
+        //foreach (GameObject planet in blockList)
+        //{
+        //    Vector2 direction = (pic2.transform.position - planet.transform.position).normalized;
+        //    planet.transform.Translate(direction * Time.deltaTime * mspeed);
+        //    float dist = Vector3.Distance(planet.transform.position, centerBall.transform.position);
+        //    if (dist <= maxGravDist)
+        //    {
+        //        Vector3 v = planet.transform.position - transform.position;
+        //        //GetComponent<Rigidbody2D>().AddForce(v.normalized * (1.0f - dist / maxGravDist) * maxGravity);
+        //        GetComponent<Rigidbody2D>().AddForce(transform.up * 10.0f);
+        //    }
+        //}
 
     }
 }
