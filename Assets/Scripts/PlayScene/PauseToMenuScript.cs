@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 public class PauseToMenuScript : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PauseToMenuScript : MonoBehaviour
     public Button backToMenuBtn;
     public void OpenMenu()
     {
+        MenuBar.GetComponent<CanvasRenderer>().SetAlpha(0.4f);
+     
         if (MenuBar.activeSelf == false)
         {
             MenuBar.SetActive(true);
