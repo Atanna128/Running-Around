@@ -16,12 +16,12 @@ public class BorderColliderScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        border.GetComponent<Image>().color = Color.red;
+        //border.GetComponent<Image>().color = Color.red;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        border.GetComponent<Image>().color = Color.green;
+        //border.GetComponent<Image>().color = Color.green;
     }
 
     // Update is called once per frame

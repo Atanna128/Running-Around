@@ -63,7 +63,7 @@
     <Compile Include="Assets\Scripts\BlockColliderScript.cs" />
     <Compile Include="Assets\Scripts\BorderColliderScript.cs" />
     <Compile Include="Assets\Scripts\ControllerScript.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <None Include="Assets\ColorfulButtons\Credits.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/buing/Unity/Running Around/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
