@@ -50,7 +50,7 @@ ___
 
 | <a href="https://github.com/boummm" target="_blank">**Lê Bá Thiên**</a> | <a href="https://github.com/Atanna128" target="_blank">**Bùi Ngọc Tú**</a>| 
 | :---: |:---:|
-| <img width="200" src="https://imgur.com/a/yLVzCzy"> | <img width="200" src="https://i.imgur.com/nGfQqCM.jpg">  |
+| <img width="200" src="https://imgur.com/H990OxK"> | <img width="200" src="https://i.imgur.com/nGfQqCM.jpg">  |
 | <a href="http://github.com/boummm" target="_blank">`github.com/boummm`</a> | <a href="http://github.com/Atanna128" target="_blank">`github.com/Atanna128`</a> |
 
 
