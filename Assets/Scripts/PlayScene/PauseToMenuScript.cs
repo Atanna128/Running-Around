@@ -12,8 +12,7 @@ public class PauseToMenuScript : MonoBehaviour
     public Button backToMenuBtn;
     public void OpenMenu()
     {
-        MenuBar.GetComponent<CanvasRenderer>().SetAlpha(0.4f);
-     
+        MenuBar.GetComponent<CanvasRenderer>().SetAlpha(0.7f);     
         if (MenuBar.activeSelf == false)
         {
             MenuBar.SetActive(true);

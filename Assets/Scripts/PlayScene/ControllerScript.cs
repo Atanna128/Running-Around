@@ -2,25 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class ControllerScript : MonoBehaviour
 {
     public GameObject block;
     public GameObject playGround;
     private float lasttime;
-    //public GameObject pic2;
+    private List<GameObject> AnnularList1 = new List<GameObject>();
+    public GameObject Circle1;
+
+    public GameObject Ann1;
+    public GameObject Ann2;
+    public GameObject Ann3;
+    public GameObject Ann4;
+    public GameObject Ann5;
+    public GameObject Ann6;
+    public GameObject Ann7;
+    public GameObject Ann8;
 
     public List<GameObject> blockList = new List<GameObject>();
-    //float maxGravDist = 4.0f;
-    //float maxGravity = 35.0f;
-
-    //float mspeed = 30.0f;
+    
     // Start is called before the first frame update
     void Start()
     {
         lasttime = Time.time;
-        
-        
+        Circle1.GetComponentInChildren<Image>().transform.Rotate(0.5f,0,0); 
     }
 
     // Update is called once per frame
@@ -31,11 +38,11 @@ public class ControllerScript : MonoBehaviour
         float time = Time.time;
         //if((time-lasttime) >0.5)
         //{
-        
+
         ////}
-        //playGround.transform.Rotate(new Vector3(00, 0,0.2f));
+        playGround.transform.Rotate(new Vector3(00, 0, 0.8f));
         //pic2.transform.Rotate(new Vector3(00, 0, -0.3f));
-        
+
         //foreach (GameObject planet in blockList)
         //{
         //    Vector2 direction = (pic2.transform.position - planet.transform.position).normalized;
