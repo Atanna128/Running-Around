@@ -37,7 +37,6 @@ public class PlayerScript : MonoBehaviour
     }
     public void Jump()
     {
-        Debug.Log("jumping");
         GetComponent<Rigidbody2D>().gravityScale *= -1;
         StartCoroutine(Coroutine());
         
