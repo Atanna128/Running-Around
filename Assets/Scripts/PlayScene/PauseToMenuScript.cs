@@ -30,9 +30,9 @@ public class PauseToMenuScript : MonoBehaviour
         
         }
 
-    public void BackToMenu()
+    public void BackToLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
+        SceneManager.LoadScene("Level Scene");
     }
 
     public void Resume()
