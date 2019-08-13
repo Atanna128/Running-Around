@@ -628,6 +628,7 @@
     <Compile Include="Assets\Scripts\PlayScene\BorderColliderScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\ControllerScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\PauseToMenuScript.cs" />
+    <Compile Include="Assets\Scripts\PlayScene\PlayerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ColorfulButtons\Credits.txt" />

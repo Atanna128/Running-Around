@@ -359,16 +359,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   block: {fileID: 2866152500353063700, guid: f59eae4e5fb8154438f292f5a0dc94f8, type: 3}
   playGround: {fileID: 511687372}
+  player: {fileID: 1095104309}
   Circle1: {fileID: 81427295}
-  Ann1: {fileID: 0}
-  Ann2: {fileID: 0}
-  Ann3: {fileID: 0}
-  Ann4: {fileID: 0}
-  Ann5: {fileID: 0}
-  Ann6: {fileID: 0}
-  Ann7: {fileID: 0}
-  Ann8: {fileID: 0}
   blockList: []
+  turnDirection: 0.8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +772,8 @@ MonoBehaviour:
   pauseBtn: {fileID: 1072579244}
   MenuBar: {fileID: 714338059}
   backToMenuBtn: {fileID: 2045426841}
+  playGround: {fileID: 511687372}
+  isPause: 0
 --- !u!114 &1072579244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,6 +840,7 @@ GameObject:
   - component: {fileID: 1095104311}
   - component: {fileID: 1095104314}
   - component: {fileID: 1095104313}
+  - component: {fileID: 1095104315}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -954,6 +951,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 5
+--- !u!114 &1095104315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095104309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ce2ac407b63dd41a9b4b9536c6a362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1102993671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,7 +1780,7 @@ PrefabInstance:
     - target: {fileID: 713280062218266365, guid: 5f2c08158869a41429b5814785eda0c4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 713280062218266364, guid: 5f2c08158869a41429b5814785eda0c4,
         type: 3}
@@ -2106,7 +2115,7 @@ PrefabInstance:
     - target: {fileID: 713280062218266365, guid: 5f2c08158869a41429b5814785eda0c4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 713280062218266364, guid: 5f2c08158869a41429b5814785eda0c4,
         type: 3}
@@ -2673,7 +2682,7 @@ PrefabInstance:
     - target: {fileID: 713280062218266365, guid: 5f2c08158869a41429b5814785eda0c4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 713280062218266364, guid: 5f2c08158869a41429b5814785eda0c4,
         type: 3}

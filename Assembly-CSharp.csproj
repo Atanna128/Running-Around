@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\PlayScene\BorderColliderScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\ControllerScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\PauseToMenuScript.cs" />
+    <Compile Include="Assets\Scripts\PlayScene\PlayerScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
