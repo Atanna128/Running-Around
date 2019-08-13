@@ -9,6 +9,7 @@ public class ControllerScript : MonoBehaviour
     public GameObject block; // will be modified
     public GameObject playGround;
     public GameObject player;
+    
     private float lasttime;
     private List<GameObject> AnnularList1 = new List<GameObject>();
     public GameObject Circle1;
@@ -35,7 +36,7 @@ public class ControllerScript : MonoBehaviour
        
         if(pauseScript.isPause == false)
         { 
-            playGround.transform.Rotate(new Vector3(00, 0, turnDirection));
+            playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
         }
 
     }
