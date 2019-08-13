@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 
 public class PauseToMenuScript : MonoBehaviour
 {
-    public Button pauseBtn;
+    public GameObject pauseBtn;
     public GameObject MenuBar;
     public Button backToMenuBtn;
     public GameObject playGround;
@@ -20,22 +20,31 @@ public class PauseToMenuScript : MonoBehaviour
     }
     public void OpenMenu()
     {
-        
+        pauseBtn.gameObject.SetActive(false);
         MenuBar.GetComponent<CanvasRenderer>().SetAlpha(0.95f);
         if (MenuBar.activeSelf == false)
         {
             isPause = true;
             MenuBar.SetActive(true);
         }
-        else
-        {
-            MenuBar.SetActive(false);
-            isPause = false;
-        }
+        
         }
 
     public void BackToMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
+    }
+
+    public void Resume()
+    {
+        pauseBtn.gameObject.SetActive(true);
+        isPause = false;
+        MenuBar.SetActive(false);
+    }
+
+    public void Retry()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }
