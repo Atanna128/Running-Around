@@ -1,7 +1,5 @@
 # Running Around
 > Once you run, you never go back ( unless you hit the wall ... )
-## Apk 
-Enjoy the game <3
 
 ___
 ## Table of contents
@@ -23,25 +21,27 @@ ___
 
 ## Technologies
 
+### Unity
+
+### Database
+- [PostgreSQL](https://www.elephantsql.com) - ElephantSQL automates every part of setup and running of PostgreSQL clusters. Available on all major cloud and application platforms all over the world.
 ---
 
 ## Deployment
+- Currently the game is not available on website, but we're working on it
 
 
 ---
 
 ## Installation
-
-- All the `code` required to get started
-- Images of what it should look like
+- The game currently available only on Android.
+- Download APK : 
 
 ### Clone
 
 - Clone this repo to your local machine using `https://github.com/Atanna128/Running-Around/
 
-
-### Setup
-
+---
 
 
 
