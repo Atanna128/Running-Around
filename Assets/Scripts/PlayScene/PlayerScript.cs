@@ -6,17 +6,18 @@ using System.Timers;
 public class PlayerScript : MonoBehaviour
 {
     private ControllerScript controllerScript;
-    float speed= 10;
-    float jumpForce = 200f;
+    public int score;
     bool isJumping;
     Rigidbody2D rb;
     private float lasttime;
     float curtime;
 
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
+        score = 0;
+        
     }
 
     public void SetControllerScriptReference(ControllerScript script)
@@ -28,6 +29,7 @@ public class PlayerScript : MonoBehaviour
     {
         isJumping = false;
         // will be modified whenever hit the side of another block instead of top and btm of block
+        if(!collision.gameObject.tag.Equals("Coin"))
         controllerScript.changeDirection();
     }
 
