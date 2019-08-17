@@ -36,7 +36,7 @@ public class ControllerScript : MonoBehaviour
        
         if(pauseScript.isPause == false)
         { 
-            playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
+            //playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
         }
 
     }

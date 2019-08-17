@@ -6,8 +6,8 @@ using System.Timers;
 public class PlayerScript : MonoBehaviour
 {
     private ControllerScript controllerScript;
-    public float speed= 10;
-    public float jumpForce = 200f;
+    float speed= 10;
+    float jumpForce = 200f;
     bool isJumping;
     Rigidbody2D rb;
     private float lasttime;
@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        isJumping = false;
     }
 
     public void SetControllerScriptReference(ControllerScript script)
@@ -25,22 +26,23 @@ public class PlayerScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        isJumping = false;
         // will be modified whenever hit the side of another block instead of top and btm of block
         controllerScript.changeDirection();
     }
 
     private IEnumerator Coroutine()
     {
-        yield return new WaitForSeconds(0.3f);        
+        isJumping = true;
         GetComponent<Rigidbody2D>().gravityScale *= -1;
+        yield return new WaitForSeconds(0.3f);        
+        GetComponent<Rigidbody2D>().gravityScale *= -1;        
 
     }
     public void Jump()
     {
-        GetComponent<Rigidbody2D>().gravityScale *= -1;
-        StartCoroutine(Coroutine());
-        
-
-
+        if (!isJumping) {            
+            StartCoroutine(Coroutine());
+        }
     }
 }
