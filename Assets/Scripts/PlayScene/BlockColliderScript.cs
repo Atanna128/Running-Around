@@ -8,13 +8,13 @@ public class BlockColliderScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // using this script to generate/active specific block 
+        // depend on block's tag
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //collision.rigidbody.velocity = new Vector2(0, 0);
-        Vector2 a = collision.otherRigidbody.worldCenterOfMass;
-        //Debug.Log(a);
+       
     }
 
 }

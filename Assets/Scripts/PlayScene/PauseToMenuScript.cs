@@ -48,3 +48,9 @@ public class PauseToMenuScript : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 }
+
+
+///level x 
+///complete/fail? pause status
+///taps/point
+///total point ?
