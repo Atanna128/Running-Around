@@ -15,7 +15,7 @@ public class CoinScript : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            //playerScript.score += 10;
+            
             player.GetComponent<PlayerScript>().score += 10;
             Debug.Log(player.GetComponent<PlayerScript>().score);
             Destroy(gameObject);
