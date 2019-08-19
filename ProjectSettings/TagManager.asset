@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Planet
   - Coin
+  - Border
+  - NormalBlock
+  - JumpBlock
   layers:
   - Default
   - TransparentFX

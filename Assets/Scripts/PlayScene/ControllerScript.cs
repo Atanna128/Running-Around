@@ -10,6 +10,8 @@ public class ControllerScript : MonoBehaviour
     public GameObject playGround;
     public GameObject player;
     public GameObject directionPlayer;
+    public GameObject pauseBtn;
+    public GameObject menuBar;
     
     private float lasttime;
     private List<GameObject> AnnularList1 = new List<GameObject>();
@@ -17,6 +19,8 @@ public class ControllerScript : MonoBehaviour
     public List<GameObject> blockList = new List<GameObject>();
     private PauseToMenuScript pauseScript;
     private float turnDirection = 0.8f;
+    private float screenHeight = Screen.height;
+    private float screenWidth = Screen.width;
     public void SetPauseScriptReference(PauseToMenuScript pauseScript)
     {
         this.pauseScript = pauseScript;
@@ -29,6 +33,10 @@ public class ControllerScript : MonoBehaviour
         lasttime = Time.time;
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
+        var pauseBtnRectTransform = pauseBtn.transform as RectTransform;
+        pauseBtnRectTransform.sizeDelta = new Vector2(screenWidth/10, screenWidth/10);
+        var menuBarRectTransform = menuBar.transform as RectTransform;
+        menuBarRectTransform.sizeDelta = new Vector2(screenWidth/1.5f, screenHeight/1.5f);
     }
 
     // Update is called once per frame  
