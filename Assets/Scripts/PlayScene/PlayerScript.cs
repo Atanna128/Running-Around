@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
 
     private void LateUpdate()
     {
+        Debug.Log(coin);
         SavePlayer();
     }
 
