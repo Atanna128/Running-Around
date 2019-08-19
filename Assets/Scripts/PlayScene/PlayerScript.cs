@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
 {
     private ControllerScript controllerScript;
     public int score;
+    public int coin;
     bool isJumping;
     Rigidbody2D rb;
     private float lasttime;
@@ -20,6 +21,12 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
         score = 0;
+        LoadPlayer();
+    }
+
+    private void LateUpdate()
+    {
+        SavePlayer();
     }
 
     public void SetControllerScriptReference(ControllerScript script)
@@ -67,9 +74,7 @@ public class PlayerScript : MonoBehaviour
         isJumping = true;
         GetComponent<Rigidbody2D>().gravityScale *= -1;
         yield return new WaitForSeconds(timer);        
-        GetComponent<Rigidbody2D>().gravityScale *= -1;
-        
-
+        GetComponent<Rigidbody2D>().gravityScale *= -1;        
     }
     public void Jump(float timer)
     {
@@ -78,4 +83,14 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        coin = data.coin;
+    }
 }

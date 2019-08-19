@@ -17,7 +17,7 @@ public class CoinScript : MonoBehaviour
         {
             
             player.GetComponent<PlayerScript>().score += 10;
-            Debug.Log(player.GetComponent<PlayerScript>().score);
+            Debug.Log("coin:" +player.GetComponent<PlayerScript>().score);
             Destroy(gameObject);
         
         }
