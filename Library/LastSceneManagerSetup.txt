@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/grideffect/testscene.unity
+=======
+- path: Assets/Scenes/Level 1.unity
+>>>>>>> 3aca066dd3ac140742fb90a16dd8fdd4490b413a
   isLoaded: 1
   isActive: 1
