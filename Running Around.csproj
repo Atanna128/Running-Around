@@ -623,9 +623,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\LevelScene\LevelMenuScript.cs" />
     <Compile Include="Assets\Scripts\MenuScene\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayScene\BlockColliderScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\BorderColliderScript.cs" />
+    <Compile Include="Assets\Scripts\PlayScene\CoinScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\ControllerScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\PauseToMenuScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\PlayerScript.cs" />

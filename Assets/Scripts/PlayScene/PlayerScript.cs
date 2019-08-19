@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Timers;
+using System;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
         score = 0;
-        
     }
 
     public void SetControllerScriptReference(ControllerScript script)
@@ -28,9 +28,26 @@ public class PlayerScript : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
-        // will be modified whenever hit the side of another block instead of top and btm of block
-        if(!collision.gameObject.tag.Equals("Coin"))
-        controllerScript.changeDirection();
+
+        if (collision.gameObject.tag.Equals("JumpBlock")) {
+            SpeedUp();
+            Jump();            
+        }else if (collision.gameObject.tag.Equals("DestroyBlock"))
+        {
+            Suicide();
+        }
+        //wait for new blocktype
+        
+    }
+
+    private void Suicide()
+    {
+      
+    }
+
+    private void SpeedUp()
+    {
+        
     }
 
     private IEnumerator Coroutine()

@@ -9,6 +9,7 @@ public class ControllerScript : MonoBehaviour
     public GameObject block; // will be modified
     public GameObject playGround;
     public GameObject player;
+    public GameObject directionPlayer;
     
     private float lasttime;
     private List<GameObject> AnnularList1 = new List<GameObject>();
@@ -27,6 +28,7 @@ public class ControllerScript : MonoBehaviour
     {
         lasttime = Time.time;
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
+        directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
     }
 
     // Update is called once per frame  

@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\PlayScene\BorderColliderScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\CoinScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\ControllerScript.cs" />
+    <Compile Include="Assets\Scripts\PlayScene\DirectionScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\PauseToMenuScript.cs" />
     <Compile Include="Assets\Scripts\PlayScene\PlayerScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
