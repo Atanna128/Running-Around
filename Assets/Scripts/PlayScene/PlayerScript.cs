@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D rb;
     private float lasttime;
     float curtime;
-    public ControllerScript scripttest;
+    public GameObject playGround;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,7 +37,11 @@ public class PlayerScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        isJumping = false;
+        if(isJumping == true)
+        {
+            playGround.GetComponent<ControllerScript>().turnDirection = 0.8f;
+            isJumping = false;
+        }
         if (collision.gameObject.tag.Equals("Coin"))
         {
             coin += 10;
@@ -66,14 +70,14 @@ public class PlayerScript : MonoBehaviour
 
     private void SpeedUp()
     {
-        //controllerScript.turnDirection = 5.0f;
-        //scripttest.GetComponent<ControllerScript>().turnDirection = 20.0f;
+        playGround.GetComponent<ControllerScript>().turnDirection = 2.0f;
+        
     }
 
     private void SpeedDown()
     {
-        //controllerScript.turnDirection = 0.8f;
         
+
     }
     private IEnumerator Coroutine(float timer)
     {
