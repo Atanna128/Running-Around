@@ -12,10 +12,16 @@ public class ControllerScript : MonoBehaviour
     public GameObject directionPlayer;
     public GameObject pauseBtn;
     public GameObject menuBar;
+
+    public GameObject playerstats;
+    public GameObject coin;
+    public GameObject resumeBtn;
+    public GameObject retryBtn;
+    public GameObject backToLevelBtn;
     
     private float lasttime;
     private List<GameObject> AnnularList1 = new List<GameObject>();
-    public GameObject Circle1;
+    //public GameObject Circle1;
     public List<GameObject> blockList = new List<GameObject>();
     private PauseToMenuScript pauseScript;
     public float turnDirection = 0.8f;
@@ -33,11 +39,15 @@ public class ControllerScript : MonoBehaviour
         lasttime = Time.time;
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
-        var pauseBtnRectTransform = pauseBtn.transform as RectTransform;
-        pauseBtnRectTransform.sizeDelta = new Vector2(screenWidth/10, screenWidth/10);
-        var menuBarRectTransform = menuBar.transform as RectTransform;
-        menuBarRectTransform.sizeDelta = new Vector2(screenWidth/1.5f, screenHeight/1.5f);
+        resizeObject(menuBar, screenWidth / 1.5f, screenHeight / 1.5f);
+        resizeObject(pauseBtn, screenWidth / 10, screenWidth / 10);
+        resizeObject(resumeBtn, screenWidth / 10, screenWidth / 10);
+        resizeObject(retryBtn, screenWidth / 10, screenWidth / 10);
+        resizeObject(backToLevelBtn, screenWidth / 10, screenWidth / 10);
+        resizeObject(playerstats, screenWidth / 10, screenWidth / 10);
+        resizeObject(coin, screenWidth / 10, screenWidth / 10);
     }
+
 
     // Update is called once per frame  
     void Update()
@@ -54,6 +64,13 @@ public class ControllerScript : MonoBehaviour
     public void changeDirection()
     {
         turnDirection *= -1;
+    }
+
+
+    private void resizeObject(GameObject obj,float multi1,float multi2)
+    {
+        var rectTransform = obj.transform as RectTransform;
+        rectTransform.sizeDelta = new Vector2(multi1,multi2);
     }
 }
 
