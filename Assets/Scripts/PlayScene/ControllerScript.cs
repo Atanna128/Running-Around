@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -20,9 +21,9 @@ public class ControllerScript : MonoBehaviour
     public GameObject backToLevelBtn;
     
     private float lasttime;
-    private List<GameObject> AnnularList1 = new List<GameObject>();
+    
     //public GameObject Circle1;
-    public List<GameObject> blockList = new List<GameObject>();
+    public List<GameObject> blockList = new List<GameObject>(255);
     private PauseToMenuScript pauseScript;
     public float turnDirection = 0.8f;
     private float screenHeight = Screen.height;
@@ -36,6 +37,7 @@ public class ControllerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        loadMap();
         lasttime = Time.time;
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
@@ -48,17 +50,27 @@ public class ControllerScript : MonoBehaviour
         resizeObject(coin, screenWidth / 10, screenWidth / 10);
     }
 
+    private void loadMap()
+    {
+        int[] list = new int[255];
+        //list  = loadfrom json();
+        //loaddata from specific json file /custom from saveSystem.cs
+        for (int i = 0; i < 255; i++)
+        {
+            // if list[i]  == 0 (inactive) / 1 (normal block) / 2 (jump block) / 3 (something new) . .
+            // blockList[i] has corresponding action
+        }
+    }
+
 
     // Update is called once per frame  
     void Update()
     {        
-        float time = Time.time;
-       
+        float time = Time.time;       
         if(pauseScript.isPause == false)
         {
             playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
-        }
-        
+        }        
     }
 
     public void changeDirection()
