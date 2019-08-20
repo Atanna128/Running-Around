@@ -18,7 +18,7 @@ public class ControllerScript : MonoBehaviour
     public GameObject Circle1;
     public List<GameObject> blockList = new List<GameObject>();
     private PauseToMenuScript pauseScript;
-    private float turnDirection = 0.8f;
+    public float turnDirection = 0.8f;
     private float screenHeight = Screen.height;
     private float screenWidth = Screen.width;
     public void SetPauseScriptReference(PauseToMenuScript pauseScript)
@@ -48,7 +48,7 @@ public class ControllerScript : MonoBehaviour
         {
             playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
         }
-
+        
     }
 
     public void changeDirection()

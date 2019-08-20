@@ -15,18 +15,18 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D rb;
     private float lasttime;
     float curtime;
-
+    public ControllerScript scripttest;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
         score = 0;
         LoadPlayer();
+        
     }
 
     private void LateUpdate()
     {
-        Debug.Log(coin);
         SavePlayer();
     }
 
@@ -38,8 +38,11 @@ public class PlayerScript : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
-
-        if (collision.gameObject.tag.Equals("JumpBlock")) {
+        if (collision.gameObject.tag.Equals("Coin"))
+        {
+            coin += 10;
+            Debug.Log("get coin:" + coin);
+        }else if (collision.gameObject.tag.Equals("JumpBlock")) {
             SpeedUp();
             Jump(0.3f);
             SpeedDown();
@@ -63,12 +66,14 @@ public class PlayerScript : MonoBehaviour
 
     private void SpeedUp()
     {
-        
+        //controllerScript.turnDirection = 5.0f;
+        //scripttest.GetComponent<ControllerScript>().turnDirection = 20.0f;
     }
 
     private void SpeedDown()
     {
-
+        //controllerScript.turnDirection = 0.8f;
+        
     }
     private IEnumerator Coroutine(float timer)
     {

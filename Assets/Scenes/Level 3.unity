@@ -344,6 +344,7 @@ MonoBehaviour:
   menuBar: {fileID: 714338059}
   Circle1: {fileID: 0}
   blockList: []
+  turnDirection: 0.8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,12 +11,21 @@ public class PauseToMenuScript : MonoBehaviour
     public GameObject MenuBar;
     public Button backToMenuBtn;
     public GameObject playGround;
-    private PauseToMenuScript pauseScript;
+    public GameObject textcoin;
+    public GameObject player;
     public bool isPause;
     private void Start()
     {
         isPause = false;
         playGround.GetComponent<ControllerScript>().SetPauseScriptReference(this);
+    }
+
+    private void Update()
+    {
+        string num = player.GetComponent<PlayerScript>().coin.ToString();
+        textcoin.GetComponent<Text>().text = num;
+        Debug.Log(textcoin.GetComponentInChildren<Text>().text);
+        
     }
     public void OpenMenu()
     {

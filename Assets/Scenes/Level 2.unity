@@ -413,6 +413,7 @@ MonoBehaviour:
   menuBar: {fileID: 714338059}
   Circle1: {fileID: 0}
   blockList: []
+  turnDirection: 0.8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  coin: 0
+  scripttest: {fileID: 0}
 --- !u!1 &1102993671
 GameObject:
   m_ObjectHideFlags: 0
