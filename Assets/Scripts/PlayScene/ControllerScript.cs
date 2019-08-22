@@ -19,6 +19,7 @@ public class ControllerScript : MonoBehaviour
     public GameObject resumeBtn;
     public GameObject retryBtn;
     public GameObject backToLevelBtn;
+    public GameObject round1;
     
     private float lasttime;
     
@@ -48,6 +49,17 @@ public class ControllerScript : MonoBehaviour
         resizeObject(backToLevelBtn, screenWidth / 10, screenWidth / 10);
         resizeObject(playerstats, screenWidth / 10, screenWidth / 10);
         resizeObject(coin, screenWidth / 10, screenWidth / 10);
+
+        
+        foreach(Transform child in round1.transform)
+        {
+            if (child.GetSiblingIndex() % 2 == 0)
+            {
+                child.gameObject.SetActive(false);
+            }
+            Debug.Log(child.gameObject.name);
+        }
+
     }
 
     private void loadMap()
