@@ -24,8 +24,8 @@ public class PauseToMenuScript : MonoBehaviour
     {
         string num = player.GetComponent<PlayerScript>().coin.ToString();
         textcoin.GetComponent<Text>().text = num;
-        //Debug.Log(textcoin.GetComponentInChildren<Text>().text);
-        
+        Debug.Log(textcoin.GetComponentInChildren<Text>().text);
+
     }
     public void OpenMenu()
     {

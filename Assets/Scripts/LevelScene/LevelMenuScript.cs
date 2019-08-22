@@ -17,6 +17,8 @@ public class LevelMenuScript : MonoBehaviour
     public void LoadLevel(Button btn)
     {
         string name = btn.name;
+        //JsonUtility.ToJson()
+        //load json of that lv to current lv;
         SceneManager.LoadScene(name);
     }
 

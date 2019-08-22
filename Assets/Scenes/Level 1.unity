@@ -1569,6 +1569,7 @@ GameObject:
   - component: {fileID: 825221514}
   - component: {fileID: 825221516}
   - component: {fileID: 825221515}
+  - component: {fileID: 825221517}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -1593,7 +1594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.5}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187.7, y: -20.400002}
+  m_AnchoredPosition: {x: 187.4, y: -20.2}
   m_SizeDelta: {x: 62, y: 147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825221515
@@ -1635,6 +1636,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825221513}
   m_CullTransparentMesh: 0
+--- !u!68 &825221517
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825221513}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 30.749636, y: 72.350105}
+  - {x: 28.935108, y: 44.00059}
+  - {x: 22.292107, y: 14.776124}
+  - {x: 15.213785, y: -5.1670547}
+  - {x: 0.9405249, y: 0.71182734}
+  - {x: -22.53351, y: 10.449362}
+  - {x: -16.04808, y: 28.619541}
+  - {x: -11.734924, y: 50.353203}
+  - {x: -9.945505, y: 72.82285}
+  - {x: 30.547523, y: 72.54064}
 --- !u!1 &868238592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,7 +2028,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 150, y: 70}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102993673
 MonoBehaviour:
@@ -2025,7 +2052,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2036,7 +2063,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123
+  m_Text: 
 --- !u!222 &1102993674
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3896,7 +3923,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 362850538}
     m_Modifications:
     - target: {fileID: 3590418075479311903, guid: 2d6b7fabc7e4de941b0e83c8a96fd8d6,
         type: 3}
@@ -3961,12 +3988,12 @@ PrefabInstance:
     - target: {fileID: 3590418075479311900, guid: 2d6b7fabc7e4de941b0e83c8a96fd8d6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 187.7
+      value: 187.4
       objectReference: {fileID: 0}
     - target: {fileID: 3590418075479311900, guid: 2d6b7fabc7e4de941b0e83c8a96fd8d6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.400002
+      value: -20.2
       objectReference: {fileID: 0}
     - target: {fileID: 3590418075479311900, guid: 2d6b7fabc7e4de941b0e83c8a96fd8d6,
         type: 3}

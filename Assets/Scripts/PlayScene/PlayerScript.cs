@@ -45,7 +45,7 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("Coin"))
         {
             coin += 10;
-            //Debug.Log("get coin:" + coin);
+            Debug.Log("get coin:" + coin);
         }
         else if (collision.gameObject.tag.Equals("JumpBlock")) {
             SpeedUp();

@@ -35,4 +35,10 @@ public static class SaveSystem
             return null;
         }
     }
+
+    public static int[] LoadMap(string level)
+    {
+        int[] list = new int[256];       
+        return JsonUtility.FromJson<int[]>(level);
+    }
 }

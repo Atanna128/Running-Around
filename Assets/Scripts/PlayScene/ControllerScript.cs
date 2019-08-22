@@ -50,14 +50,15 @@ public class ControllerScript : MonoBehaviour
         resizeObject(playerstats, screenWidth / 10, screenWidth / 10);
         resizeObject(coin, screenWidth / 10, screenWidth / 10);
 
-        
+        // demo loadMap function
         foreach(Transform child in round1.transform)
         {
-            if (child.GetSiblingIndex() % 2 == 0)
+            if (child.GetSiblingIndex() != 0)
             {
                 child.gameObject.SetActive(false);
             }
             Debug.Log(child.gameObject.name);
+            child.tag = "JumpBlock";
         }
 
     }
@@ -66,7 +67,7 @@ public class ControllerScript : MonoBehaviour
     {
         int[] list = new int[255];
         //list  = loadfrom json();
-        //loaddata from specific json file /custom from saveSystem.cs
+        //loaddata from currentmap.json
         for (int i = 0; i < 255; i++)
         {
             // if list[i]  == 0 (inactive) / 1 (normal block) / 2 (jump block) / 3 (something new) . .
