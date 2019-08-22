@@ -24,6 +24,7 @@ ___
 ### Unity
 
 ### Database
+- Currently this game can be played offline only, but we will support online version using online database - PostgreSQL
 - [PostgreSQL](https://www.elephantsql.com) - ElephantSQL automates every part of setup and running of PostgreSQL clusters. Available on all major cloud and application platforms all over the world.
 ---
 
@@ -35,7 +36,7 @@ ___
 
 ## Installation
 - The game currently available only on Android.
-- Download APK : 
+- Download APK : https://github.com/Atanna128/Running-Around/tree/master/mobile
 
 ### Clone
 
