@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-
+using System.IO;
 public class ControllerScript : MonoBehaviour
 {
     public GameObject block; // will be modified
@@ -29,6 +29,7 @@ public class ControllerScript : MonoBehaviour
     public float turnDirection = 0.8f;
     private float screenHeight = Screen.height;
     private float screenWidth = Screen.width;
+    private MapData data = new MapData();
     public void SetPauseScriptReference(PauseToMenuScript pauseScript)
     {
         this.pauseScript = pauseScript;
@@ -51,27 +52,43 @@ public class ControllerScript : MonoBehaviour
         resizeObject(coin, screenWidth / 10, screenWidth / 10);
 
         // demo loadMap function
-        foreach(Transform child in round1.transform)
+        //foreach(Transform child in round1.transform)
+        //{
+        //    if (child.GetSiblingIndex() != 0)
+        //    {
+        //        child.gameObject.SetActive(false);
+        //    }
+          
+        //    child.tag = "JumpBlock";
+        //}
+        
+    }
+    
+    private void loadMap()
+    {
+        string currentPath = "Assets/LevelJson/CurrentLevel.json";
+        StreamReader stream = new StreamReader(currentPath);
+        string json = stream.ReadToEnd();
+        data = JsonUtility.FromJson<MapData>(json);
+        foreach (Transform child in round1.transform)
         {
-            if (child.GetSiblingIndex() != 0)
-            {
-                child.gameObject.SetActive(false);
-            }
-            Debug.Log(child.gameObject.name);
-            child.tag = "JumpBlock";
+            int index = child.GetSiblingIndex();
+            SetUpBlock(child, data.list[index]);
         }
+
 
     }
 
-    private void loadMap()
+    private void SetUpBlock(Transform child, int tagNum)
     {
-        int[] list = new int[255];
-        //list  = loadfrom json();
-        //loaddata from currentmap.json
-        for (int i = 0; i < 255; i++)
+        if(tagNum == 0)
         {
-            // if list[i]  == 0 (inactive) / 1 (normal block) / 2 (jump block) / 3 (something new) . .
-            // blockList[i] has corresponding action
+            child.GetComponent<Image>().color = Color.gray;
+            child.transform.tag = "NormalBlock";
+        }else if(tagNum == 1)
+        {
+            child.GetComponent<Image>().color = Color.cyan;
+            child.transform.tag = "JumpBlock";
         }
     }
 

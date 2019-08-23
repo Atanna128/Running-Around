@@ -36,9 +36,23 @@ public static class SaveSystem
         }
     }
 
-    public static int[] LoadMap(string level)
+    public static MapData LoadMap(string level)
     {
-        int[] list = new int[256];       
-        return JsonUtility.FromJson<int[]>(level);
+        MapData data = new MapData();
+        string currentPath = "Assets/LevelJson/" + level + ".json";
+        StreamReader stream = new StreamReader(currentPath);
+        string json = stream.ReadToEnd();
+        data = JsonUtility.FromJson<MapData>(json);
+        stream.Close();
+        return data;
+    }
+
+    public static void SaveMap(MapData data, string level)
+    {
+        string path = "Assets/LevelJson/" + level + ".json";
+        string json = JsonUtility.ToJson(data);
+        //StreamWriter stream = new StreamWriter(path); // dong nay gay ra bug :(
+        Debug.Log(json);
+        File.WriteAllText(path, json);
     }
 }
