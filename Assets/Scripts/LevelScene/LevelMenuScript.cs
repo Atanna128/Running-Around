@@ -16,11 +16,12 @@ public class LevelMenuScript : MonoBehaviour
     }
     public void LoadLevel(Button btn)
     {//bug ne
-        string name = btn.name;
+        string name = btn.name; 
         MapData data = new MapData();
         data = SaveSystem.LoadMap(name);
         SaveSystem.SaveMap(data, "CurrentLevel");
         SceneManager.LoadScene(name);
+
     }
 
     public void BackToMainMenu()

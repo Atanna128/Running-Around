@@ -9,7 +9,7 @@ public static class SaveSystem
     public static void SavePlayer(PlayerScript player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.mydb";
+        string path = Application.dataPath + "/player.mydb";
         //Debug.Log(path);
         FileStream stream = new FileStream(path, FileMode.Create);
 
@@ -39,7 +39,8 @@ public static class SaveSystem
     public static MapData LoadMap(string level)
     {
         MapData data = new MapData();
-        string currentPath = "Assets/LevelJson/" + level + ".json";
+        string currentPath = Application.dataPath + "/LevelJson/" + level + ".json";
+        Debug.Log(currentPath);
         StreamReader stream = new StreamReader(currentPath);
         string json = stream.ReadToEnd();
         data = JsonUtility.FromJson<MapData>(json);
@@ -49,9 +50,9 @@ public static class SaveSystem
 
     public static void SaveMap(MapData data, string level)
     {
-        string path = "Assets/LevelJson/" + level + ".json";
+        string path = Application.dataPath + "/LevelJson/" + level + ".json";
         string json = JsonUtility.ToJson(data);
-        //StreamWriter stream = new StreamWriter(path); // dong nay gay ra bug :(
+        
         Debug.Log(json);
         File.WriteAllText(path, json);
     }

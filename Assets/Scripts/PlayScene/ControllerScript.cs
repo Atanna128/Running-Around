@@ -19,7 +19,7 @@ public class ControllerScript : MonoBehaviour
     public GameObject resumeBtn;
     public GameObject retryBtn;
     public GameObject backToLevelBtn;
-    public GameObject round1;
+    public GameObject listObject;
     
     private float lasttime;
     
@@ -43,7 +43,9 @@ public class ControllerScript : MonoBehaviour
         lasttime = Time.time;
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
+        menuBar.SetActive(true);
         resizeObject(menuBar, screenWidth / 1.5f, screenHeight / 1.5f);
+        menuBar.SetActive(false);
         resizeObject(pauseBtn, screenWidth / 10, screenWidth / 10);
         resizeObject(resumeBtn, screenWidth / 10, screenWidth / 10);
         resizeObject(retryBtn, screenWidth / 10, screenWidth / 10);
@@ -66,11 +68,11 @@ public class ControllerScript : MonoBehaviour
     
     private void loadMap()
     {
-        string currentPath = "Assets/LevelJson/CurrentLevel.json";
+        string currentPath = Application.dataPath +  "/LevelJson/CurrentLevel.json";
         StreamReader stream = new StreamReader(currentPath);
         string json = stream.ReadToEnd();
         data = JsonUtility.FromJson<MapData>(json);
-        foreach (Transform child in round1.transform)
+        foreach (Transform child in listObject.transform)
         {
             int index = child.GetSiblingIndex();
             SetUpBlock(child, data.list[index]);
