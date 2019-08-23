@@ -39,7 +39,7 @@ public class ControllerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loadMap();
+        //loadMap();
         lasttime = Time.time;
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
