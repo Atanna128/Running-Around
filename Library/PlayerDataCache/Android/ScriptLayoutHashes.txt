@@ -5,8 +5,6 @@ SceneListBegin?
 Assets/Scenes/Menu Scene.unity
 Assets/Scenes/Level Scene.unity
 Assets/Scenes/Level1.unity
-Assets/Scenes/Level2.unity
-Assets/Scenes/Level3.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -159,7 +157,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-55b6eb50f7afb986a193a7e00de04b31 Assembly-CSharp.dll:.ControllerScript
+f22d818e336c25c647735e98c7b64454 Assembly-CSharp.dll:.ControllerScript
 b588b2cc65f0aacce6c9eb50c4427d0d Assembly-CSharp.dll:.BlockColliderScript
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton

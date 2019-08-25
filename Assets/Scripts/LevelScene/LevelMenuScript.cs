@@ -19,7 +19,7 @@ public class LevelMenuScript : MonoBehaviour
         string name = btn.name; 
         MapData data = new MapData();
         data = SaveSystem.LoadMap(name);
-        SaveSystem.SaveMap(data, "CurrentLevel");
+        //SaveSystem.SaveMap(data, "CurrentLevel");
         SceneManager.LoadScene(name);
 
     }

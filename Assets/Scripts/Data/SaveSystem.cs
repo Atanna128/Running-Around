@@ -9,12 +9,11 @@ public static class SaveSystem
     public static void SavePlayer(PlayerScript player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.dataPath + "/player.mydb";
-        //Debug.Log(path);
+        string path = Application.persistentDataPath + "/player.mydb";
         FileStream stream = new FileStream(path, FileMode.Create);
-
         PlayerData data = new PlayerData(player);
         formatter.Serialize(stream, data);
+        
         stream.Close();
     }
 
@@ -31,20 +30,28 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogError("Save file not found in " + path);
+            FileStream stream = new FileStream(path, FileMode.Create);
+            stream.Close();
             return null;
         }
+        
     }
 
     public static MapData LoadMap(string level)
     {
         MapData data = new MapData();
         string currentPath = Application.dataPath + "/LevelJson/" + level + ".json";
-        Debug.Log(currentPath);
-        StreamReader stream = new StreamReader(currentPath);
-        string json = stream.ReadToEnd();
+        //Debug.Log(currentPath);
+        //StreamReader stream = new StreamReader(currentPath);
+        //string json = stream.ReadToEnd();
         data = JsonUtility.FromJson<MapData>(json);
-        stream.Close();
+        //FileStream stream = new FileStream(currentPath, FileMode.Open);
+        //string log = File.ReadAllText(currentPath);
+        //data = JsonUtility.FromJson<MapData>(log);
+        //stream.Close();
+        
+
+
         return data;
     }
 
@@ -55,5 +62,6 @@ public static class SaveSystem
         
         Debug.Log(json);
         File.WriteAllText(path, json);
+        
     }
 }

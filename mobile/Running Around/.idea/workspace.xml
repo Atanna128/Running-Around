@@ -5,36 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7ee7676-c8a5-415e-a5da-63ba3a548424" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_buing_Unity_Running_Around_mobile_Running_Around_libs_unity_classes_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.vs/Running Around/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/Running Around/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.vs/Running Around/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/Running Around/v16/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assets/Scenes/Level Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assets/Scenes/Level Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assets/Scripts/Data/SaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assets/Scripts/Data/SaveSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assets/Scripts/LevelScene/LevelMenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assets/Scripts/LevelScene/LevelMenuScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assets/Scripts/PlayScene/ControllerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assets/Scripts/PlayScene/ControllerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assets/player.mydb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assets/player.mydb.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/EditorUserBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/LastBuild.buildreport" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/Managed/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/Managed/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/c41005c129ba4d66911b75229fd70b45" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/c41005c129ba4d66911b75229fd70b45" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/f952c082cb03451daed3ee968ac6c63e" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/f952c082cb03451daed3ee968ac6c63e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/globalgamemanagers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/globalgamemanagers.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level4" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets1.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/level4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets2.assets" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets2.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets3.assets" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets3.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets4.assets" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets4.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets3.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/Data/sharedassets4.assets" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/ScriptLayoutHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/PlayerDataCache/Android/ScriptLayoutHashes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
@@ -44,12 +34,12 @@
       <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/StateCache/SceneView/f22bd2-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/StateCache/SceneView/f22bd2-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/assetDatabase3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/expandedItems" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/metadata/73/734135496e230ac44ac21cd3cb190327" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/73/734135496e230ac44ac21cd3cb190327" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/8a/8af13b23a76356a4b98901f95045cb2a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/8a/8af13b23a76356a4b98901f95045cb2a.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/metadata/c9/c9f39000672c70d4dbd4a850d450787d" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/c9/c9f39000672c70d4dbd4a850d450787d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/metadata/dd/ddfc702b5c9df554eb1bb755dcb95e5b" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/dd/ddfc702b5c9df554eb1bb755dcb95e5b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
@@ -58,7 +48,12 @@
       <change beforePath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Running-Around.apk" beforeDir="false" afterPath="$PROJECT_DIR$/../Running-Around.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/build-info/debug/build-info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/build-info/debug/build-info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../abac.apk" beforeDir="false" afterPath="$PROJECT_DIR$/../abac.apk" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -150,8 +145,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
