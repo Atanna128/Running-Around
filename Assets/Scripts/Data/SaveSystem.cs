@@ -44,7 +44,7 @@ public static class SaveSystem
         //Debug.Log(currentPath);
         //StreamReader stream = new StreamReader(currentPath);
         //string json = stream.ReadToEnd();
-        data = JsonUtility.FromJson<MapData>(json);
+        //data = JsonUtility.FromJson<MapData>(json);
         //FileStream stream = new FileStream(currentPath, FileMode.Open);
         //string log = File.ReadAllText(currentPath);
         //data = JsonUtility.FromJson<MapData>(log);
