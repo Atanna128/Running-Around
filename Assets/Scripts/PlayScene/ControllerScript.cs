@@ -21,6 +21,7 @@ public class ControllerScript : MonoBehaviour
     public GameObject retryBtn;
     public GameObject backToLevelBtn;
     public GameObject listObject;
+    public GameObject levelNumber;
     
     private float lasttime;
     
@@ -30,7 +31,7 @@ public class ControllerScript : MonoBehaviour
     public float turnDirection = 0.8f;
     private float screenHeight = Screen.height;
     private float screenWidth = Screen.width;
-    private MapData data = new MapData();
+    //private MapData data = new MapData();
     public void SetPauseScriptReference(PauseToMenuScript pauseScript)
     {
         this.pauseScript = pauseScript;
@@ -60,18 +61,17 @@ public class ControllerScript : MonoBehaviour
     private void loadMap()
     {
         string currentPath = Application.persistentDataPath +  "/CurrentLevel.map";
-
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream = new FileStream(currentPath, FileMode.Open);
         MapData data = formatter.Deserialize(stream) as MapData;
-
+        levelNumber.GetComponent<Text>().text = "Level " + data.level.ToString();
         
 
         foreach (Transform child in listObject.transform)
         {
            
             int index = child.GetSiblingIndex();
-            Debug.Log(index);
+            
             SetUpBlock(child, data.list[index]);
         }
 

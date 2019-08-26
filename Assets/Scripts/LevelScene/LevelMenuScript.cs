@@ -15,13 +15,11 @@ public class LevelMenuScript : MonoBehaviour
         backBtnRectTransform.sizeDelta = new Vector2(screenWidth / 4, screenWidth / 4);
     }
     public void LoadLevel(Button btn)
-    {//bug ne
+    {
         string name = btn.name; 
-        MapData data = new MapData();
-        data = SaveSystem.LoadMap(name);
-        Debug.Log(data.list);
-        //SaveSystem.SaveMap(data, "CurrentLevel");
-        SceneManager.LoadScene(name);
+        MapData data = SaveSystem.LoadMap(name);
+        SaveSystem.SaveMap(data, "CurrentLevel");
+        SceneManager.LoadScene("Level1");
 
     }
 

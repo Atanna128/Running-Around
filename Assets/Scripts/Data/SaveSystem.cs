@@ -8,8 +8,8 @@ public static class SaveSystem
 {
     public static void SavePlayer(PlayerScript player)
     {
-        BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.mydb";
+        BinaryFormatter formatter = new BinaryFormatter();        
         FileStream stream = new FileStream(path, FileMode.Create);
         PlayerData data = new PlayerData(player);
         formatter.Serialize(stream, data);        
@@ -38,7 +38,7 @@ public static class SaveSystem
 
     public static MapData LoadMap(string level)
     {
-        string currentPath = Application.persistentDataPath +   "/Level1" + ".map";
+        string currentPath = Application.persistentDataPath +   "/" + level + ".map";
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream = new FileStream(currentPath, FileMode.Open);
         MapData data = formatter.Deserialize(stream) as MapData;
@@ -49,17 +49,17 @@ public static class SaveSystem
 
     public static void SaveMap(MapData data, string level)
     {
-        string path = Application.dataPath + "/" +  level + ".map";       
+        string path = Application.persistentDataPath + "/" +  level + ".map";       
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream fileStream = new FileStream(path, FileMode.Create);
-        formatter.Serialize(fileStream, data);
-        fileStream.Close();
+        FileStream stream = new FileStream(path, FileMode.Create);
+        formatter.Serialize(stream, data);
+        stream.Close();
     }
 
 
     public static void GenerateMap(MapData data, string level)
     {
-        string path = Application.persistentDataPath + "/Level1" + ".map";
+        string path = Application.persistentDataPath + "/" + level + ".map";
         if (!File.Exists(path))
         {
             FileStream stream = new FileStream(path, FileMode.Create);
@@ -69,18 +69,7 @@ public static class SaveSystem
             FileStream fileStream = new FileStream(path, FileMode.Create);
             formatter.Serialize(fileStream, data);
             fileStream.Close();
-        }
-
-        string path1 = Application.persistentDataPath + "/CurrentLevel.map";
-        if (!File.Exists(path1))
-        {
-            FileStream stream = new FileStream(path1, FileMode.Create);
-            stream.Close();
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream fileStream = new FileStream(path1, FileMode.Create);
-            formatter.Serialize(fileStream, data);
-            fileStream.Close();
-        }
+        }      
 
     }
 }
