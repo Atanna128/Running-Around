@@ -14,11 +14,7 @@ public class MainMenuScript : MonoBehaviour
     {
         MapData data = new MapData();
         string[] level = new string[10]; //example 10 maps
-        string path = Application.dataPath + "/LevelJson/" + level[0] + ".json";
-        FileStream fileStream = new FileStream(path, FileMode.Create);
-        //fileStream.Write(data.);
-        
-        fileStream.Close();
+        SaveSystem.GenerateMap(data, level[0]);
     }
     public void PlayGame()
     {

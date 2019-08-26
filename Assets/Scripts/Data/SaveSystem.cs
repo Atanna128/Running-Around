@@ -12,8 +12,7 @@ public static class SaveSystem
         string path = Application.persistentDataPath + "/player.mydb";
         FileStream stream = new FileStream(path, FileMode.Create);
         PlayerData data = new PlayerData(player);
-        formatter.Serialize(stream, data);
-        
+        formatter.Serialize(stream, data);        
         stream.Close();
     }
 
@@ -39,29 +38,49 @@ public static class SaveSystem
 
     public static MapData LoadMap(string level)
     {
-        MapData data = new MapData();
-        string currentPath = Application.dataPath + "/LevelJson/" + level + ".json";
-        //Debug.Log(currentPath);
-        //StreamReader stream = new StreamReader(currentPath);
-        //string json = stream.ReadToEnd();
-        //data = JsonUtility.FromJson<MapData>(json);
-        //FileStream stream = new FileStream(currentPath, FileMode.Open);
-        //string log = File.ReadAllText(currentPath);
-        //data = JsonUtility.FromJson<MapData>(log);
-        //stream.Close();
-        
-
-
+        string currentPath = Application.persistentDataPath +   "/Level1" + ".json";
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(currentPath, FileMode.Open);
+        MapData data = formatter.Deserialize(stream) as MapData;
+        stream.Close();
         return data;
+        
     }
 
     public static void SaveMap(MapData data, string level)
     {
-        string path = Application.dataPath + "/LevelJson/" + level + ".json";
-        string json = JsonUtility.ToJson(data);
-        
-        Debug.Log(json);
-        File.WriteAllText(path, json);
-        
+        string path = Application.dataPath + "/" +  level + ".json";       
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream fileStream = new FileStream(path, FileMode.Create);
+        formatter.Serialize(fileStream, data);
+        fileStream.Close();
+    }
+
+
+    public static void GenerateMap(MapData data, string level)
+    {
+        string path = Application.persistentDataPath + "/Level1" + ".json";
+        if (!File.Exists(path))
+        {
+            FileStream stream = new FileStream(path, FileMode.Create);
+            stream.Close();
+
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream fileStream = new FileStream(path, FileMode.Create);
+            formatter.Serialize(fileStream, data);
+            fileStream.Close();
+        }
+
+        string path1 = Application.persistentDataPath + "/CurrentLevel" + ".json";
+        if (!File.Exists(path1))
+        {
+            FileStream stream = new FileStream(path1, FileMode.Create);
+            stream.Close();
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream fileStream = new FileStream(path1, FileMode.Create);
+            formatter.Serialize(fileStream, data);
+            fileStream.Close();
+        }
+
     }
 }

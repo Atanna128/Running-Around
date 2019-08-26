@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 public class ControllerScript : MonoBehaviour
 {
     public GameObject block; // will be modified
@@ -39,7 +40,7 @@ public class ControllerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //loadMap();
+        loadMap();
         lasttime = Time.time;
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
@@ -53,25 +54,18 @@ public class ControllerScript : MonoBehaviour
         resizeObject(playerstats, screenWidth / 10, screenWidth / 10);
         resizeObject(coin, screenWidth / 10, screenWidth / 10);
 
-        // demo loadMap function
-        //foreach(Transform child in round1.transform)
-        //{
-        //    if (child.GetSiblingIndex() != 0)
-        //    {
-        //        child.gameObject.SetActive(false);
-        //    }
-          
-        //    child.tag = "JumpBlock";
-        //}
         
     }
     
     private void loadMap()
     {
-        string currentPath = Application.dataPath +  "/LevelJson/CurrentLevel.json";
-        StreamReader stream = new StreamReader(currentPath);
-        string json = stream.ReadToEnd();
-        data = JsonUtility.FromJson<MapData>(json);
+        string currentPath = Application.persistentDataPath +  "/CurrentLevel.json";
+
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(currentPath, FileMode.Open);
+        MapData data = formatter.Deserialize(stream) as MapData;
+        
+
         foreach (Transform child in listObject.transform)
         {
             int index = child.GetSiblingIndex();

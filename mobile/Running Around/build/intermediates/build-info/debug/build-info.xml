@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.2.0"
-    timestamp="1566552282207"
+    timestamp="1566794006161"
     token="713260578287267768"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1566552282207"
+        timestamp="1566794006161"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\buing\Unity\Running Around\mobile\Running Around\build\intermediates\split-apk\debug\slices\slice_9.apk"
