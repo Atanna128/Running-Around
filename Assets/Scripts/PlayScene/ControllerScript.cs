@@ -82,7 +82,7 @@ public class ControllerScript : MonoBehaviour
     {
         if(tagNum == 0)
         {   
-            //child.GetComponent<GameObject>().SetActive(false);
+            // no block
         }else if(tagNum == 1)
         {
             child.gameObject.SetActive(true);
