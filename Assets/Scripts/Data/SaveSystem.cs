@@ -38,7 +38,7 @@ public static class SaveSystem
 
     public static MapData LoadMap(string level)
     {
-        string currentPath = Application.persistentDataPath +   "/Level1" + ".json";
+        string currentPath = Application.persistentDataPath +   "/Level1" + ".map";
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream = new FileStream(currentPath, FileMode.Open);
         MapData data = formatter.Deserialize(stream) as MapData;
@@ -49,7 +49,7 @@ public static class SaveSystem
 
     public static void SaveMap(MapData data, string level)
     {
-        string path = Application.dataPath + "/" +  level + ".json";       
+        string path = Application.dataPath + "/" +  level + ".map";       
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream fileStream = new FileStream(path, FileMode.Create);
         formatter.Serialize(fileStream, data);
@@ -59,7 +59,7 @@ public static class SaveSystem
 
     public static void GenerateMap(MapData data, string level)
     {
-        string path = Application.persistentDataPath + "/Level1" + ".json";
+        string path = Application.persistentDataPath + "/Level1" + ".map";
         if (!File.Exists(path))
         {
             FileStream stream = new FileStream(path, FileMode.Create);
@@ -71,7 +71,7 @@ public static class SaveSystem
             fileStream.Close();
         }
 
-        string path1 = Application.persistentDataPath + "/CurrentLevel" + ".json";
+        string path1 = Application.persistentDataPath + "/CurrentLevel.map";
         if (!File.Exists(path1))
         {
             FileStream stream = new FileStream(path1, FileMode.Create);

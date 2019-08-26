@@ -59,16 +59,19 @@ public class ControllerScript : MonoBehaviour
     
     private void loadMap()
     {
-        string currentPath = Application.persistentDataPath +  "/CurrentLevel.json";
+        string currentPath = Application.persistentDataPath +  "/CurrentLevel.map";
 
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream = new FileStream(currentPath, FileMode.Open);
         MapData data = formatter.Deserialize(stream) as MapData;
+
         
 
         foreach (Transform child in listObject.transform)
         {
+           
             int index = child.GetSiblingIndex();
+            Debug.Log(index);
             SetUpBlock(child, data.list[index]);
         }
 
@@ -78,11 +81,16 @@ public class ControllerScript : MonoBehaviour
     private void SetUpBlock(Transform child, int tagNum)
     {
         if(tagNum == 0)
-        {
-            child.GetComponent<Image>().color = Color.gray;
-            child.transform.tag = "NormalBlock";
+        {   
+            //child.GetComponent<GameObject>().SetActive(false);
         }else if(tagNum == 1)
         {
+            child.gameObject.SetActive(true);
+            child.GetComponent<Image>().color = Color.black;
+            child.transform.tag = "NormalBlock";
+        }else if(tagNum == 2)
+        {
+            child.gameObject.SetActive(true);
             child.GetComponent<Image>().color = Color.cyan;
             child.transform.tag = "JumpBlock";
         }
