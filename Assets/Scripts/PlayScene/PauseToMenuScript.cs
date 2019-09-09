@@ -27,7 +27,7 @@ public class PauseToMenuScript : MonoBehaviour
         //Debug.Log(textcoin.GetComponentInChildren<Text>().text);
 
     }
-    public void OpenMenu()
+    public void PauseAndOpenMenu()
     {
         pauseBtn.gameObject.SetActive(false);
         MenuBar.GetComponent<CanvasRenderer>().SetAlpha(0.95f);
@@ -37,7 +37,7 @@ public class PauseToMenuScript : MonoBehaviour
             MenuBar.SetActive(true);
         }
         
-        }
+    }
 
     public void BackToLevel()
     {

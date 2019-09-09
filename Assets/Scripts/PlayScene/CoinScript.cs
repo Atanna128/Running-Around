@@ -16,6 +16,7 @@ public class CoinScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {            
             Destroy(gameObject);        
+            // make music here
         }
     }
 }

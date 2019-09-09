@@ -14,9 +14,10 @@ public class ControllerScript : MonoBehaviour
     public GameObject directionPlayer;
     public GameObject pauseBtn;
     public GameObject menuBar;
+    public GameObject coinList;
 
     public GameObject playerstats;
-    public GameObject coin;
+    public GameObject coinImg;
     public GameObject resumeBtn;
     public GameObject retryBtn;
     public GameObject backToLevelBtn;
@@ -24,6 +25,9 @@ public class ControllerScript : MonoBehaviour
     public GameObject levelNumber;
     
     private float lasttime;
+    private float curtime;
+    private int totalcoin;
+    private bool isWin;
     
     //public GameObject Circle1;
     public List<GameObject> blockList = new List<GameObject>(255);
@@ -43,6 +47,8 @@ public class ControllerScript : MonoBehaviour
     {
         loadMap();
         lasttime = Time.time;
+        curtime = lasttime;
+        isWin = false;  
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
         menuBar.SetActive(true);
@@ -53,8 +59,9 @@ public class ControllerScript : MonoBehaviour
         resizeObject(retryBtn, screenWidth / 10, screenWidth / 10);
         resizeObject(backToLevelBtn, screenWidth / 10, screenWidth / 10);
         resizeObject(playerstats, screenWidth / 10, screenWidth / 10);
-        resizeObject(coin, screenWidth / 10, screenWidth / 10);
-
+        resizeObject(coinImg, screenWidth / 10, screenWidth / 10);
+      
+        totalcoin = coinList.transform.childCount;
         
     }
     
@@ -101,10 +108,26 @@ public class ControllerScript : MonoBehaviour
     void Update()
     {        
         float time = Time.time;       
-        if(pauseScript.isPause == false)
+        if(pauseScript.isPause == false && isWin == false)
         {
             playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
-        }        
+        }         // sau khi resume thi turnDirection dc khoi phuc o playerscript.oncollsionenter.if()
+
+
+        totalcoin = coinList.transform.childCount;
+        if(totalcoin <= 0)
+        {
+            isWin = true;
+            playGround.transform.Rotate(new Vector3(0, 0, 0));
+            pauseBtn.SetActive(false);
+            resumeBtn.SetActive(false);
+            menuBar.SetActive(true);
+            retryBtn.SetActive(false);
+            //  WinningBar.SetActive(true) se thay cho nhung setactive cac btn tren.
+
+        }
+
+
     }
 
     public void changeDirection()
