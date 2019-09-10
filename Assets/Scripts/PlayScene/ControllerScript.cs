@@ -24,8 +24,8 @@ public class ControllerScript : MonoBehaviour
     public GameObject listObject;
     public GameObject levelNumber;
     
-    private float lasttime;
-    private float curtime;
+    private float startTime;
+    private float curTime;
     private int totalcoin;
     private bool isWin;
     
@@ -46,8 +46,8 @@ public class ControllerScript : MonoBehaviour
     void Start()
     {
         loadMap();
-        lasttime = Time.time;
-        curtime = lasttime;
+        startTime = Time.time;
+        curTime = startTime;
         isWin = false;  
         player.GetComponent<PlayerScript>().SetControllerScriptReference(this);
         directionPlayer.GetComponent<DirectionScript>().SetControllerScriptReference(this);
@@ -106,13 +106,8 @@ public class ControllerScript : MonoBehaviour
 
     // Update is called once per frame  
     void Update()
-    {        
-        float time = Time.time;       
-        if(pauseScript.isPause == false && isWin == false)
-        {
-            playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
-        }         // sau khi resume thi turnDirection dc khoi phuc o playerscript.oncollsionenter.if()
-
+    {
+        curTime = Time.time;
 
         totalcoin = coinList.transform.childCount;
         if(totalcoin <= 0)
@@ -124,9 +119,13 @@ public class ControllerScript : MonoBehaviour
             menuBar.SetActive(true);
             retryBtn.SetActive(false);
             //  WinningBar.SetActive(true) se thay cho nhung setactive cac btn tren.
-
+            // countTime.setText = curtime-startTime.toString();
         }
 
+        if (pauseScript.isPause == false && isWin == false)
+        {
+            playGround.transform.Rotate(new Vector3(0, 0, turnDirection));
+        }         // sau khi resume thi turnDirection dc khoi phuc o playerscript.oncollsionenter.if()
 
     }
 
